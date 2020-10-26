@@ -1,0 +1,70 @@
+<container-element [ngSwitch]="options?.mode">
+  <ng-container *ngSwitchCase="'block'">
+    <div class="metrics metrics-block" [style]="theme?.style.common">
+      <div class="metrics-tips" [style]="theme?.style.label">
+        {{ options?.label }}
+      </div>
+      <div class="block-value" [style]="theme?.style.value">
+        {{ options?.value }}
+      </div>
+      <div *ngIf="options?.unit" class="block-unit" [style]="theme?.style.unit">
+        {{ options?.unit }}
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'block-2'">
+    <div class="metrics metrics-block" [style]="theme?.style.common">
+      <div class="block-tips" [style]="theme?.style.label">
+        {{ options?.label }}
+      </div>
+      <div class="block-metrics">
+        <span class="block-value" [style]="theme?.style.value">
+          {{ options?.value }}
+        </span>
+        <span
+          *ngIf="options?.unit"
+          class="block-unit"
+          [style]="theme?.style.unit"
+        >
+          {{ options?.unit }}
+        </span>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'block-3'">
+    <div class="metrics metrics-block-2" [style]="theme?.style.common">
+      <div class="block-tips" [style]="theme?.style.label">
+        {{ options?.label }}
+      </div>
+      <div class="block-metrics">
+        <div class="block-value" [style]="theme?.style.value">
+          {{ options?.value }}
+        </div>
+        <div
+          *ngIf="options?.unit"
+          class="block-unit"
+          [style]="theme?.style.unit"
+        >
+          {{ options?.unit }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchDefault>
+    <div class="metrics metrics-inline" [style]="theme?.style.common">
+      <span class="inline-tips" [style]="theme?.style.label">
+        {{ options?.label }}
+      </span>
+      <span class="inline-val" [style]="theme?.style.value">
+        {{ options?.value }}
+      </span>
+      <span
+        *ngIf="options?.showUnit != false"
+        class="inline-unit"
+        [style]="theme?.style.unit"
+      >
+        {{ options?.unit }}
+      </span>
+    </div>
+  </ng-container>
+</container-element>

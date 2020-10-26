@@ -1,0 +1,16 @@
+.metrics {
+  position: relative;
+}
+
+.metrics-block-2 .block-metrics {
+  position: relative;
+}
+.metrics-block-2 .block-metrics .block-unit {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.metrics-inline div {
+  display: inline-block;
+}

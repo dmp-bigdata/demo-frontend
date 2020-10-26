@@ -23,6 +23,8 @@ import { TsFlowDemoComponent } from './demo/ts-flow-demo/ts-flow-demo.component'
 import { DataMapDemoComponent } from './demo/data-map-demo/data-map-demo.component';
 import { DataMapComponent } from './shared/data-map/data-map.component';
 import { TsFlowComponent } from './shared/ts-flow/ts-flow.component';
+import { MetricsDemoComponent } from './demo/metrics-demo/metrics-demo.component';
+import { MetricsComponent } from './shared/metrics/metrics.component';
 
 registerLocaleData(zh);
 
@@ -42,6 +44,8 @@ registerLocaleData(zh);
     DataMapDemoComponent,
     DataMapComponent,
     TsFlowComponent,
+    MetricsComponent,
+    MetricsDemoComponent,
   ],
   imports: [
     BrowserModule,
